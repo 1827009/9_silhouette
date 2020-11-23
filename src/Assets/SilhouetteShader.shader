@@ -51,10 +51,10 @@
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag(v2f i) : SV_Target
             {
                 // sample the texture
-                fixed4 col = _OutlineColor;
+                fixed4 col = (_Time % 1,_Time % 1,_Time % 1,_Time % 1);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
